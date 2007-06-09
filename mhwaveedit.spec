@@ -1,8 +1,9 @@
 %define name 	mhwaveedit
 %define version 1.4.12
-%define release %mkrel 1
+%define release %mkrel 2
+%define	Summary	WAV Editing Package
 
-Summary:	WAV Editing Package
+Summary:	%{Summary}
 Name: 		%{name}
 Version: 	%{version}
 Release: 	%{release}
@@ -30,9 +31,9 @@ OGG and LAME support are available if installed.
 %make
 
 %install
-rm -fr $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall
-%find_lang %name
+%find_lang %{name}
 
 # Menu
 mkdir -p %buildroot/%{_menudir}
@@ -56,7 +57,7 @@ EOF
 
 
 %clean
-rm -rf %buildroot/
+rm -rf %{buildroot}
 
 %post
 %{update_menus}
@@ -64,11 +65,10 @@ rm -rf %buildroot/
 %postun
 %{clean_menus}
 
-%files -f %name.lang
+%files -f %{name}.lang
 %defattr(-,root,root)
 %doc AUTHORS BUGS ChangeLog NEWS README TODO
-%_bindir/%name
-%_menudir/%name
-%_datadir/applications/*
-
+%{_bindir}/%{name}
+%{_menudir}/%{name}
+%{_datadir}/applications/*
 
