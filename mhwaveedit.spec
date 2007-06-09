@@ -35,14 +35,6 @@ rm -rf %{buildroot}
 %makeinstall
 %find_lang %{name}
 
-# Menu
-mkdir -p %buildroot/%{_menudir}
-cat > %buildroot/%{_menudir}/%{name} <<EOF
-?package(%{name}): command="%{_bindir}/%{name}" needs="X11" \
-icon="sound_section.png" section="Multimedia/Sound" \
-title="MHWaveEdit" longtitle="WAV audio editor" xdg="true"
-EOF
-
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
@@ -54,7 +46,6 @@ Terminal=false
 Type=Application
 Categories=X-MandrivaLinux-Multimedia-Sound;AudioVideo;Audio;
 EOF
-
 
 %clean
 rm -rf %{buildroot}
