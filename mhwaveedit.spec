@@ -60,6 +60,5 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc AUTHORS BUGS ChangeLog NEWS README TODO
 %{_bindir}/%{name}
-%{_menudir}/%{name}
 %{_datadir}/applications/*
 
