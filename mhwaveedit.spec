@@ -41,7 +41,7 @@ cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 Name=%{name}
 Comment=%{Summary}
 Exec=%{name}
-Icon=sound_section.png
+Icon=sound_section
 Terminal=false
 Type=Application
 Categories=X-MandrivaLinux-Multimedia-Sound;AudioVideo;Audio;
