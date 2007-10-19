@@ -1,6 +1,6 @@
 %define name 	mhwaveedit
-%define version 1.4.12
-%define release %mkrel 3
+%define version 1.4.13
+%define release %mkrel 1
 %define	Summary	WAV Editing Package
 
 Summary:	%{Summary}
