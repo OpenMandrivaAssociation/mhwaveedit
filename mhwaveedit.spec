@@ -1,5 +1,5 @@
 %define name 	mhwaveedit
-%define version 1.4.13
+%define version 1.4.14
 %define release %mkrel 1
 %define	Summary	WAV Editing Package
 
@@ -7,7 +7,7 @@ Summary:	%{Summary}
 Name: 		%{name}
 Version: 	%{version}
 Release: 	%{release}
-License: 	GPL
+License: 	GPLv2+
 Group: 		Sound
 URL: 		https://gna.org/projects/mhwaveedit/
 Source0: 	http://download.gna.org/mhwaveedit/%{name}-%{version}.tar.bz2
