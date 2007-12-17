@@ -11,7 +11,6 @@ License: 	GPLv2+
 Group: 		Sound
 URL: 		https://gna.org/projects/mhwaveedit/
 Source0: 	http://download.gna.org/mhwaveedit/%{name}-%{version}.tar.bz2
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires: 	pkgconfig gtk+2-devel SDL-devel libsndfile-devel libalsa-devel
 BuildRequires:	jackit-devel libsamplerate-devel ladspa-devel
 BuildRequires:  arts-devel
