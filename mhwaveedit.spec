@@ -1,6 +1,6 @@
 %define name 	mhwaveedit
 %define version 1.4.15
-%define release %mkrel 1
+%define release %mkrel 2
 %define	Summary	WAV Editing Package
 
 Summary:	%{Summary}
@@ -35,18 +35,6 @@ OGG and LAME support are available if installed.
 rm -rf %{buildroot}
 %makeinstall_std
 %find_lang %{name}
-
-mkdir -p %{buildroot}%{_datadir}/applications
-cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
-[Desktop Entry]
-Name=%{name}
-Comment=%{Summary}
-Exec=%{name}
-Icon=sound_section
-Terminal=false
-Type=Application
-Categories=AudioVideo;Audio;
-EOF
 
 %clean
 rm -rf %{buildroot}
