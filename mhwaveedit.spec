@@ -1,6 +1,6 @@
 %define name 	mhwaveedit
-%define version 1.4.14
-%define release %mkrel 3
+%define version 1.4.15
+%define release %mkrel 1
 %define	Summary	WAV Editing Package
 
 Summary:	%{Summary}
@@ -11,10 +11,10 @@ License: 	GPLv2+
 Group: 		Sound
 URL: 		https://gna.org/projects/mhwaveedit/
 Source0: 	http://download.gna.org/mhwaveedit/%{name}-%{version}.tar.bz2
+Patch0:		mhwaveedit-1.4.15-fix-str-fmt.patch
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires: 	pkgconfig gtk+2-devel SDL-devel libsndfile-devel libalsa-devel
 BuildRequires:	jackit-devel libsamplerate-devel ladspa-devel
-BuildRequires:  arts-devel
 
 %description
 mhWaveEdit is a graphical program for editing sound files. It is completely 
@@ -25,6 +25,7 @@ OGG and LAME support are available if installed.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %configure2_5x --without-portaudio
@@ -32,7 +33,7 @@ OGG and LAME support are available if installed.
 
 %install
 rm -rf %{buildroot}
-%makeinstall
+%makeinstall_std
 %find_lang %{name}
 
 mkdir -p %{buildroot}%{_datadir}/applications
@@ -44,7 +45,7 @@ Exec=%{name}
 Icon=sound_section
 Terminal=false
 Type=Application
-Categories=X-MandrivaLinux-Multimedia-Sound;AudioVideo;Audio;
+Categories=AudioVideo;Audio;
 EOF
 
 %clean
@@ -65,4 +66,4 @@ rm -rf %{buildroot}
 %doc AUTHORS BUGS ChangeLog NEWS README TODO
 %{_bindir}/%{name}
 %{_datadir}/applications/*
-
+%{_datadir}/pixmaps/mhwaveedit.xpm
