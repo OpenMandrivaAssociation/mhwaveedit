@@ -11,7 +11,6 @@ License: 	GPLv2+
 Group: 		Sound
 URL: 		https://gna.org/projects/mhwaveedit/
 Source0: 	http://download.gna.org/mhwaveedit/%{name}-%{version}.tar.bz2
-Patch0:		mhwaveedit-1.4.15-fix-str-fmt.patch
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires: 	pkgconfig gtk+2-devel SDL-devel libsndfile-devel libalsa-devel
 BuildRequires:	jackit-devel libsamplerate-devel ladspa-devel
@@ -25,7 +24,6 @@ OGG and LAME support are available if installed.
 
 %prep
 %setup -q
-#patch0 -p0
 
 %build
 %configure2_5x --without-portaudio
