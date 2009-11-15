@@ -1,6 +1,6 @@
 %define name 	mhwaveedit
-%define version 1.4.15
-%define release %mkrel 2
+%define version 1.4.16
+%define release %mkrel 1
 %define	Summary	WAV Editing Package
 
 Summary:	%{Summary}
@@ -25,7 +25,7 @@ OGG and LAME support are available if installed.
 
 %prep
 %setup -q
-%patch0 -p0
+#patch0 -p0
 
 %build
 %configure2_5x --without-portaudio
