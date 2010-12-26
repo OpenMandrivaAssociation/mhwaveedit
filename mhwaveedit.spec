@@ -53,3 +53,4 @@ rm -rf %{buildroot}
 %{_bindir}/%{name}
 %{_datadir}/applications/*
 %{_datadir}/pixmaps/mhwaveedit.xpm
+%{_mandir}/man1/mhwaveedit.1*
