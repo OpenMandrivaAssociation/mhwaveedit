@@ -1,5 +1,5 @@
 %define name 	mhwaveedit
-%define version 1.4.19
+%define version 1.4.20
 %define release %mkrel 1
 %define	Summary	WAV Editing Package
 
@@ -16,9 +16,9 @@ BuildRequires: 	pkgconfig gtk+2-devel SDL-devel libsndfile-devel libalsa-devel
 BuildRequires:	jackit-devel libsamplerate-devel ladspa-devel
 
 %description
-mhWaveEdit is a graphical program for editing sound files. It is completely 
-free (GPL) and it's written by Magnus Hjorth. It is intended to be 
-user-friendly and robust. 
+mhWaveEdit is a graphical program for editing sound files. It is completely
+free (GPL) and it's written by Magnus Hjorth. It is intended to be
+user-friendly and robust.
 
 OGG and LAME support are available if installed.
 
