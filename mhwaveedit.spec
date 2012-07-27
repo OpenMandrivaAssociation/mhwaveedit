@@ -1,13 +1,12 @@
 Summary:	WAV Editing Package
 Name: 		mhwaveedit
-Version: 	1.4.21
-Release: 	%mkrel 1
+Version: 	1.4.22
+Release: 	1
 License: 	GPLv2+
 Group: 		Sound
 URL: 		https://gna.org/projects/mhwaveedit/
 Source0: 	http://download.gna.org/mhwaveedit/%{name}-%{version}.tar.bz2
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
-BuildRequires: 	pkgconfig gtk+2-devel SDL-devel libsndfile-devel libalsa-devel
+BuildRequires: 	pkgconfig gtk+2-devel SDL-devel sndfile-devel libalsa-devel
 BuildRequires:	jackit-devel libsamplerate-devel ladspa-devel
 
 %description
@@ -25,25 +24,10 @@ OGG and LAME support are available if installed.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 %find_lang %{name}
 
-%clean
-rm -rf %{buildroot}
-
-%if %mdkversion < 200900
-%post
-%{update_menus}
-%endif
-
-%if %mdkversion < 200900
-%postun
-%{clean_menus}
-%endif
-
 %files -f %{name}.lang
-%defattr(-,root,root)
 %doc AUTHORS BUGS ChangeLog NEWS README TODO
 %{_bindir}/%{name}
 %{_datadir}/applications/*
