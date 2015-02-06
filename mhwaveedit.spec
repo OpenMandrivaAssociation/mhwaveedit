@@ -1,7 +1,7 @@
 Summary:	WAV Editing Package
 Name: 		mhwaveedit
 Version: 	1.4.22
-Release: 	1
+Release: 	2
 License: 	GPLv2+
 Group: 		Sound
 URL: 		https://gna.org/projects/mhwaveedit/
